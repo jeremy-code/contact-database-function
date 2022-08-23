@@ -1,0 +1,8 @@
+name = "contact-database-function"
+main = "src/index.ts"
+compatibility_date = "2022-08-23"
+
+[[ d1_databases ]]
+binding = "DB"
+database_name = "CONTACT_DB"
+database_id = "82f2622b-6f1e-41a5-a177-68bc2c19e35e"
