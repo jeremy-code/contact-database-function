@@ -17,9 +17,9 @@ export default {
 		try {
 			const [data] = await Promise.all([
 				formSchema.validate(await req.json()),
-				createTableIfNotExists(env.DB, "messages"),
+				createTableIfNotExists(env.DB, "db_messages"),
 			]);
-			const res = await insertMessage(env.DB, "messages", data);
+			const res = await insertMessage(env.DB, "db_messages", data);
 			if (res.success) {
 				return new Response(JSON.stringify(data), { status: 202 });
 			}
