@@ -4,6 +4,7 @@ declare type D1Result<T = unknown> = {
 	changes: number;
 	duration: number;
 	error?: string;
+	success?: boolean;
 };
 
 declare abstract class D1Database {

@@ -19,8 +19,11 @@ export default {
 				formSchema.validate(await req.json()),
 				createTableIfNotExists(env.DB, "messages"),
 			]);
-			await insertMessage(env.DB, "messages", data);
-			return new Response(JSON.stringify(data), { status: 202 });
+			const res = await insertMessage(env.DB, "messages", data);
+			if (res.success) {
+				return new Response(JSON.stringify(data), { status: 202 });
+			}
+			return new Response("Internal Server Error", { status: 500 });
 		} catch (e) {
 			return new Response("Invalid Request", { status: 400 });
 		}
