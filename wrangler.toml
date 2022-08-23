@@ -1,6 +1,6 @@
 name = "contact-database-function"
-main = "src/index.ts"
 compatibility_date = "2022-08-23"
+main = "src/index.ts"
 
 [[ d1_databases ]]
 binding = "DB"
