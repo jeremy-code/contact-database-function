@@ -41,3 +41,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           preCommands: npm install yup
+          wranglerVersion: "0.0.0-7c228171"
