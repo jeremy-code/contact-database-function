@@ -1,6 +1,7 @@
 name = "contact-database-function"
 compatibility_date = "2022-08-23"
 main = "src/index.ts"
+account_id = "7dc0feb1df1ba5d6a9c99e160d1c8f57"
 
 [[ d1_databases ]]
 binding = "DB"
